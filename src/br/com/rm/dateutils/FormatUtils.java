@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import br.com.rm.dateutils.constants.DateFormats;
-import br.com.rm.exceptions.DateUtilsException;
 
 public class FormatUtils {
 
@@ -14,12 +13,12 @@ public class FormatUtils {
 		return simpleDateFormat.format(input);
 	}
 	
-	public static Date parse(String dateStr, String format) throws DateUtilsException {
+	public static Date parse(String dateStr, String format) {
 		try {
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
 			return simpleDateFormat.parse(dateStr);
 		} catch (ParseException e) {
-			throw new DateUtilsException();
+			return null;
 		}
 	}
 	
@@ -31,18 +30,14 @@ public class FormatUtils {
 				if(dateStr.equals(dateFormatted)) {
 					return format;
 				}
-			} catch (DateUtilsException e) {}
+			} catch (Exception e) {}
 		}
 		return null;
 	}
 	
 	public static Date getDateFromString(String date) {
 		String format = getDateFormat(date);
-		try {
-			return parse(date, format);
-		} catch (DateUtilsException e) {
-			return null;
-		}
+		return parse(date, format);
 	}
 	
 }
