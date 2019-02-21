@@ -4,9 +4,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import br.com.rm.dateutils.constants.DateFormats;
 import br.com.rm.exceptions.DateUtilsException;
 
-public class DateUtils {
+public class FormatUtils {
 
 	public static String format(Date input, String format) {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
@@ -17,7 +18,7 @@ public class DateUtils {
 		try {
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
 			return simpleDateFormat.parse(dateStr);
-		} catch (Exception e) {
+		} catch (ParseException e) {
 			throw new DateUtilsException();
 		}
 	}
@@ -25,8 +26,11 @@ public class DateUtils {
 	public static String getDateFormat(String dateStr) {
 		for(String format : DateFormats.formats) {
 			try {
-				parse(dateStr, format);
-				return format;
+				Date date = parse(dateStr, format);
+				String dateFormatted = format(date, format);
+				if(dateStr.equals(dateFormatted)) {
+					return format;
+				}
 			} catch (DateUtilsException e) {}
 		}
 		return null;
@@ -40,4 +44,5 @@ public class DateUtils {
 			return null;
 		}
 	}
+	
 }
