@@ -33,11 +33,11 @@ public class SimpleCSVWriter {
 	public void write(List<String> head, List<List<String>> body ) {
 		List<String> rows = new ArrayList<String>();
 		
-		rows.add(extractRowFromColunsList(head));
+		rows.add(extractRowFromColumnsList(head));
 		
 		if(body != null && body.size() > 0) {
 			for(List<String> bodyCol : body) {
-				rows.add(extractRowFromColunsList(bodyCol));
+				rows.add(extractRowFromColumnsList(bodyCol));
 			}
 		}
 		
@@ -94,7 +94,7 @@ public class SimpleCSVWriter {
 		
 	}
 	
-	private String extractRowFromColunsList(List<String> columns){
+	private String extractRowFromColumnsList(List<String> columns){
 		StringBuilder row = new StringBuilder();
 		if(columns != null && columns.size() > 0) {
 			for(String headCol : columns) {
