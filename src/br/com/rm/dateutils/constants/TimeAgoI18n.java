@@ -48,7 +48,7 @@ public class TimeAgoI18n {
 		es.put(EnumDateTimeUnit.YEARS, String.format(prettyFormatEs, "años"));
 		
 		
-		en.put(EnumDateTimeUnit.NOW, "now.");
+		en.put(EnumDateTimeUnit.NOW, "just now.");
 		en.put(EnumDateTimeUnit.SECOND, String.format(prettyFormatEn, "second"));
 		en.put(EnumDateTimeUnit.SECONDS, String.format(prettyFormatEn, "seconds"));
 		en.put(EnumDateTimeUnit.MINUTE, String.format(prettyFormatEn, "minute"));
