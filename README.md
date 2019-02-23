@@ -7,21 +7,21 @@ Projeto com métodos utilitários em java:
 
 To get a Git project into your build:
 
-# Step 1. Add the JitPack repository to your build file
+# Step 1. Add the JitPack repository to your project
 
-Add it in your root build.gradle at the end of repositories:
+Add it in your root build.gradle or pom.xml at the end of repositories:
+
+# Gradle
 ```
-Gradle
-
 allprojects {
   repositories {
     ...
     maven { url 'https://jitpack.io' }
   }
 }
-
-Maven
-
+```
+# Maven
+```
 <repositories>
 	<repository>
 	    <id>jitpack.io</id>
@@ -33,15 +33,17 @@ Maven
   
   
 # Step 2. Add the dependency
-```
-Gradle
 
+# Gradle
+```
 dependencies {
 	        implementation 'com.github.RomarioTeles:RmUtils:Tag'
 }
 
-Maven
+```
 
+# Maven
+```
 <dependency>
     <groupId>com.github.RomarioTeles</groupId>
     <artifactId>RmUtils</artifactId>
