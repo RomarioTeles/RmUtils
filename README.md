@@ -12,15 +12,16 @@ To get a Git project into your build:
 Add it in your root build.gradle at the end of repositories:
 
 # Gradle
-
+```config
 allprojects {
   repositories {
     ...
     maven { url 'https://jitpack.io' }
   }
-}
+}```
 
 # Maven
+
 ```xml
 <repositories>
 	<repository>
@@ -33,17 +34,17 @@ allprojects {
 # Step 2. Add the dependency
 
 # Gradle
-
+```config
 dependencies {
 	        implementation 'com.github.RomarioTeles:RmUtils:Tag'
-}
+}```
 
 # Maven
 
-'<dependency>
+<dependency>
     <groupId>com.github.RomarioTeles</groupId>
     <artifactId>RmUtils</artifactId>
     <version>Tag</version>
-</dependency>'
+</dependency>
 
 
