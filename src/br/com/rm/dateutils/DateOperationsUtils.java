@@ -3,7 +3,7 @@ package br.com.rm.dateutils;
 import java.util.Calendar;
 import java.util.Date;
 
-public class DateOperations {
+public class DateOperationsUtils {
 
 	public static Date addDays(Date input, int days) {
 		return add(Calendar.DAY_OF_MONTH, input, days);

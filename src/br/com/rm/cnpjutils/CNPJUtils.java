@@ -2,7 +2,7 @@ package br.com.rm.cnpjutils;
 
 import java.util.InputMismatchException;
 
-public class CNPJ {
+public class CNPJUtils {
 	public static boolean isCNPJ(String CNPJ) {
 		CNPJ = CNPJ.replaceAll("[^a-zA-Z0-9]+","");
 		// considera-se erro CNPJ's formados por uma sequencia de numeros iguais

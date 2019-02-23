@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import br.com.rm.dateutils.constants.TimeAgoI18n;
 
-public class TimeAgo {
+public class TimeAgoUtils {
 	
 	private static final List<Long> times = Arrays.asList(
 	        TimeUnit.DAYS.toMillis(365),
@@ -23,7 +23,7 @@ public class TimeAgo {
 	
 	private Map<EnumDateTimeUnit, String> messages;
 
-	public TimeAgo(Locale locale) {
+	public TimeAgoUtils(Locale locale) {
 		super();
 		this.messages = TimeAgoI18n.getMessages(locale);
 	}
@@ -32,8 +32,8 @@ public class TimeAgo {
 
 	    StringBuilder res = new StringBuilder();
 	    res.append(this.messages.get(EnumDateTimeUnit.NOW));
-	    for(int i=0;i< TimeAgo.times.size(); i++) {
-	        Long current = TimeAgo.times.get(i);
+	    for(int i=0;i< TimeAgoUtils.times.size(); i++) {
+	        Long current = TimeAgoUtils.times.get(i);
 	        long temp = duration/current;
 	        if(temp>0) {
 	        	res = new StringBuilder();

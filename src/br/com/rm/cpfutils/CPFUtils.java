@@ -2,7 +2,7 @@ package br.com.rm.cpfutils;
 
 import java.util.InputMismatchException;
 
-public class CPF {
+public class CPFUtils {
 	public static boolean isCPF(String CPF) {
 		CPF = CPF.replaceAll("[^a-zA-Z0-9]+","");
 		// considera-se erro CPF's formados por uma sequencia de numeros iguais

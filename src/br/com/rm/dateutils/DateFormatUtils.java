@@ -6,7 +6,7 @@ import java.util.Date;
 
 import br.com.rm.dateutils.constants.DateFormats;
 
-public class DateFormat {
+public class DateFormatUtils {
 
 	public static String format(Date input, String format) {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
