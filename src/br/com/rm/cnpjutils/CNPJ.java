@@ -1,4 +1,4 @@
-package br.com.rm.cnpj;
+package br.com.rm.cnpjutils;
 
 import java.util.InputMismatchException;
 
@@ -64,7 +64,7 @@ public class CNPJ {
 		  }
 		 
 		  public static String formatCNPJ(String CNPJ) {
-		    // máscara do CNPJ: 99.999.999.9999-99
+		    // máscara do CNPJ: 99.999.999.9999/99
 		    return(CNPJ.substring(0, 2) + "." + CNPJ.substring(2, 5) + "." +
 		      CNPJ.substring(5, 8) + "/" + CNPJ.substring(8, 12) + "-" +
 		      CNPJ.substring(12, 14));

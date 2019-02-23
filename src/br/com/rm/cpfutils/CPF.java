@@ -1,4 +1,4 @@
-package br.com.rm.cpf;
+package br.com.rm.cpfutils;
 
 import java.util.InputMismatchException;
 
