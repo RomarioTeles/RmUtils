@@ -10,41 +10,44 @@ To get a Git project into your build:
 # Step 1. Add the JitPack repository to your build file
 
 Add it in your root build.gradle at the end of repositories:
+```
+Gradle
 
-# Gradle
-```config
 allprojects {
   repositories {
     ...
     maven { url 'https://jitpack.io' }
   }
-}```
+}
 
 # Maven
 
-```xml
 <repositories>
 	<repository>
 	    <id>jitpack.io</id>
 	    <url>https://jitpack.io</url>
 	</repository>
-</repositories> ```
+</repositories>
+
+```
   
   
 # Step 2. Add the dependency
+```
+Gradle
 
-# Gradle
-```config
 dependencies {
 	        implementation 'com.github.RomarioTeles:RmUtils:Tag'
-}```
+}
 
-# Maven
+Maven
 
 <dependency>
     <groupId>com.github.RomarioTeles</groupId>
     <artifactId>RmUtils</artifactId>
     <version>Tag</version>
 </dependency>
+
+```
 
 
