@@ -20,7 +20,7 @@ allprojects {
   }
 }
 
-# Maven
+Maven
 
 <repositories>
 	<repository>
