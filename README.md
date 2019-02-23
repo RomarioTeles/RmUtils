@@ -22,12 +22,12 @@ allprojects {
 
 # Maven
 
-<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+'<repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+</repositories>'
   
   
 # Step 2. Add the dependency
@@ -40,10 +40,10 @@ dependencies {
 
 # Maven
 
-<dependency>
-	    <groupId>com.github.RomarioTeles</groupId>
-	    <artifactId>RmUtils</artifactId>
-	    <version>Tag</version>
-	</dependency>
+'<dependency>
+    <groupId>com.github.RomarioTeles</groupId>
+    <artifactId>RmUtils</artifactId>
+    <version>Tag</version>
+</dependency>'
 
 
