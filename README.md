@@ -37,7 +37,7 @@ allprojects {
 # Gradle
 ```
 dependencies {
-	        implementation 'com.github.RomarioTeles:RmUtils:Tag'
+	        implementation 'com.github.RomarioTeles:RmUtils:-SNAPSHOT'
 }
 
 ```
